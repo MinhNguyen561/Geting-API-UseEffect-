@@ -4,6 +4,49 @@ import { useEffect } from 'react';
 
 function App() {
 
+//   const Toggle = () => {
+//     const [tab, setTab] = useState("post");
+//     console.log(tab);
+  
+//   }
+
+
+
+//   return (
+//     <div className="App">
+//       {/* <header className="App-header">
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <p>
+//           Edit <code>src/App.js</code> and save to reload.
+//         </p>
+//         <a
+//           className="App-link"
+//           href="https://reactjs.org"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//           Learn React
+//         </a>
+//       </header> */}
+
+//     <div className="button"> 
+//         <button className="btn" type="submit">Toggle</button>
+//     </div>
+//     <div className="tabs">
+//         <button type="submit">post</button>
+//         <button type="submit">comments</button>
+//         <button type="submit">albums</button>
+//         <button type="submit">photos</button>
+//         <button type="submit">todos</button>
+//         <button type="submit">users</button>
+//     </div>
+//     <div className="content">
+
+//     </div>
+//     </div>
+    
+//   );
+// }
 
   const [selectedTab, setSelectedTab] = useState(''); // State to track the selected tab
   const [apiResponse, setApiResponse] = useState(''); // State to store the API response
@@ -33,15 +76,6 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    const fetchInitialData = async () => {
-      await handleButtonClick('post');
-      setContentVisible(true);
-    };
-
-    fetchInitialData();
-  }, []);
-  
   const toggle = () => {
     setContentVisible(!contentVisible);
   };
